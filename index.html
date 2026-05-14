@@ -1,57 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Muzammil's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
+    <title>Muzammil Siddiqui | Portfolio</title>
 </head>
+
 <body>
-  <nav>
-    <h1>Muzammil Siddiqui</h1>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Three.js Canvas for Background Effects -->
+    <canvas id="webgl-canvas"></canvas>
 
-  <section id="hero">
-    <h2>👋 Hi, I'm Muzammil</h2>
-    <p>A passionate Computer Science student exploring full-stack development and AI-driven apps.</p>
-    <button onclick="scrollToProjects()">View My Work</button>
-  </section>
+    <!-- <=============================== Navbar ======================================= > -->
+    <nav>
+        <div class="logo">
+        </div>
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="https://github.com/MuxammilSidd" target="_blank" class="nav-social-icon"><i
+                    class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/muzammilsiddiqui27" target="_blank" class="nav-social-icon"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <div class="hamgurber-menu" style="display: none;">
+                <span class="1"></span>
+                <span class="2"></span>
+            </div>
+        </div>
+    </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm currently pursuing a Bachelor's in Computer Science and love creating
-      software solutions that combine simplicity with power. I’m experienced
-      in C++, Python, and building GUIs with frameworks like Raylib and Tkinter.
-    </p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>🎥 Video Editor (OS Project)</h3>
-      <p>Multithreaded video editor using Raylib and synchronization concepts.</p>
+    <!-- <=============================== Herobox ======================================= > -->
+    <div class="herobox" id="home">
+        <div class="character">
+            <!-- Using the generated placeholder or your personal photo -->
+            <img src="./images/me.png" alt="Muzammil Siddiqui">
+        </div>
+        <div class="red-circle"></div>
+        <h1 class="herobox-mainheading">MUZAMMIL</h1>
+        <div class="herobox-content-container">
+            <div class="content-1">
+                <h1 class="heros-names">SOFTWARE</h1>
+                <h1 class="heros-names">ENGINEER</h1>
+            </div>
+            <div class="content-2">
+                <h1 class="heros-names">WEB DEV</h1>
+                <h1 class="heros-names">SECURITY</h1>
+            </div>
+        </div>
+        <div class="grid">
+            <h1 class="surname-text">SIDDIQUI</h1>
+        </div>
+        <div class="top-bar">
+            <div class="topbar-buttons">
+            </div>
+            <p>Based in [ Karachi, PK ]</p>
+        </div>
+        <div class="hero-slider">
+            <div class="slider-container tech-marquee">
+                <!-- Tech stack loop -->
+                <div class="slider tech-strip">
+                    <h1>HTML</h1>
+                    <h1>CSS</h1>
+                    <h1>JS</h1>
+                    <h1>REACT</h1>
+                    <h1>NEXT.JS</h1>
+                    <h1>C++</h1>
+                    <h1>PYTHON</h1>
+                    <h1>GITHUB</h1>
+                    <h1>C</h1>
+                    <h1>RAYLIB</h1>
+                    <h1>REACT NATIVE</h1>
+                </div>
+                <div class="slider tech-strip">
+                    <h1>HTML</h1>
+                    <h1>CSS</h1>
+                    <h1>JS</h1>
+                    <h1>REACT</h1>
+                    <h1>NEXT.JS</h1>
+                    <h1>C++</h1>
+                    <h1>PYTHON</h1>
+                    <h1>GITHUB</h1>
+                    <h1>C</h1>
+                    <h1>RAYLIB</h1>
+                    <h1>REACT NATIVE</h1>
+                </div>
+            </div>
+        </div>
+        <div class="hero-footer">
+            <div class="left-hero-content">
+                <div class="left-heroheading">
+                    <div class="hero-left-footer-logo"></div>
+                    <h1>DEVELOPER IDENTITY</h1>
+                </div>
+                <p>Motivated Computer Science student at FAST University. Passionate about learning modern technologies
+                    and solving real-world problems through software.</p>
+            </div>
+            <div class="right-hero-content">
+                <a href="#projects" id="projects-btn">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="cd"></div>
+                <p>01</p>
+            </div>
+        </div>
     </div>
-    <div class="project-card">
-      <h3>📚 Academic Content Scraper</h3>
-      <p>AI-driven Python app that organizes and downloads academic material from GitHub.</p>
+
+    <!-- <=============================== Section 1 (About & Skills) ======================================= > -->
+    <div class="section-1" id="about">
+        <div class="hero-slider">
+            <div class="slider-container tech-marquee tech-marquee-reverse">
+                <!-- Another tech/skill slider or design element -->
+                <div class="slider tech-strip">
+                    <h1>SUPABASE</h1>
+                    <h1>SDL2</h1>
+                    <h1>GIT</h1>
+                    <h1>LINUX</h1>
+                    <h1>SQLITE</h1>
+                    <h1>HTML</h1>
+                    <h1>CSS</h1>
+                    <h1>JS</h1>
+                    <h1>REACT</h1>
+                    <h1>NEXT.JS</h1>
+                    <h1>C++</h1>
+                    <h1>PYTHON</h1>
+                    <h1>GITHUB</h1>
+                    <h1>C</h1>
+                    <h1>RAYLIB</h1>
+                    <h1>REACT NATIVE</h1>
+                </div>
+                <div class="slider tech-strip">
+                    <h1>SUPABASE</h1>
+                    <h1>SDL2</h1>
+                    <h1>GIT</h1>
+                    <h1>LINUX</h1>
+                    <h1>SQLITE</h1>
+                    <h1>HTML</h1>
+                    <h1>CSS</h1>
+                    <h1>JS</h1>
+                    <h1>REACT</h1>
+                    <h1>NEXT.JS</h1>
+                    <h1>C++</h1>
+                    <h1>PYTHON</h1>
+                    <h1>GITHUB</h1>
+                    <h1>C</h1>
+                    <h1>RAYLIB</h1>
+                    <h1>REACT NATIVE</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="topback"></div>
+        <div class="topbackground"></div>
+
+        <div class="card-container" id="skills">
+            <!-- Representing Skills / Certs -->
+            <div class="card skill-card">
+                <div class="skill-content">
+                    <h3>Frontend</h3>
+                    <p>React, Next.js, HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+            <div class="card skill-card">
+                <div class="skill-content">
+                    <h3>Backend</h3>
+                    <p>Python, REST APIs</p>
+                </div>
+            </div>
+            <div class="card skill-card">
+                <div class="skill-content">
+                    <h3>Languages</h3>
+                    <p>C++, C, Python, JavaScript</p>
+                </div>
+            </div>
+            <div class="card skill-card">
+                <div class="skill-content">
+                    <h3>Cybersecurity</h3>
+                    <p>Security Fundamentals, Google Cyber Cert</p>
+                </div>
+            </div>
+            <div class="card skill-card">
+                <div class="skill-content">
+                    <h3>Tools</h3>
+                    <p>GitHub, VS Code, Linux, Supabase</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="marvel-studio about-header">
+            <div class="marvel-header" style="align-items: flex-start;">
+                <div class="marvel-icon" style="margin-top: 5px; opacity: 0; display: none;"></div>
+                <h1>EDUCATION</h1>
+            </div>
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">FAST NUCES</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">COMMECS COLLEGE</div>
+                        <div class="timeline-subtitle">Intermediate</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">BEACONHOUSE</div>
+                        <div class="timeline-subtitle">Matriculation</div>
+                    </div>
+                </div>
+            </div>
+            <div class="rating-icon-container" style="margin-left: 30px; margin-top: 15px;">
+                <p class="rating-icon-only"
+                    style="color: white; width: 50px; height: 50px; border-radius: 50%; border: 1px solid white; display: flex; align-items: center; justify-content: center; font-family: var(--secondaryFont); transform: rotate(-20deg);">
+                    02</p>
+            </div>
+        </div>
+
+        <div class="date-status stats-container">
+            <div class="trailer stat-box">
+                <h2>CGPA</h2>
+                <h1>3.16</h1>
+            </div>
+            <div class="IMAX stat-box">
+                <h2>YEAR</h2>
+                <h1>3RD</h1>
+            </div>
+            <div class="date stat-box">
+                <h2>EXP</h2>
+                <h1>2+</h1>
+            </div>
+        </div>
+
+        <div class="section1-right-top-description">
+            <div class="left-bar"></div>
+            <p>"PASSIONATE ABOUT BUILDING PRACTICAL SOLUTIONS AND IMMERSIVE WEB EXPERIENCES."</p>
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+        <!-- Rating section removed -->
+
+        <div class="socials">
+            <a href="https://github.com/MuxammilSidd" target="_blank" class="social-icon"><i
+                    class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/muzammilsiddiqui27" target="_blank" class="social-icon"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:memuzammilsiddiqui@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+
+        <div class="left-section1-content">
+            <div class="left-section1heading">
+                <div class="section1-left-footer-logo"></div>
+                <h1>BACKGROUND</h1>
+            </div>
+            <p><span>PART B.</span> Currently pursuing a Bachelor of Science in Computer Science. Coursework includes
+                Data Structures, Algorithms, Operating Systems, Database Systems, AI, and Software Project Management.
+                Actively participating in ACM Coders Cup and DevDay.</p>
+        </div>
+
+        <h1 class="section-1footer-heading section-1FooterHeading">PROBLEM</h1>
+        <h2 class="section-1footer-heading2 section-1FooterHeading">SOLVER</h2>
+        <h1 class="section-1footer-heading3 section-1FooterHeading">& CREATOR</h1>
+        <p class="section-1footer-date">SCROLL FOR PROJECTS</p>
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email me at: <a href="mailto:muzammil@example.com">muzammil@example.com</a></p>
-  </section>
+    <!-- <=============================== Section 2 (Projects) ======================================= > -->
+    <div class="section-2" id="projects">
+        <div class="section2-counting">
+            <div class="left-counting">
+                <p>01</p>
+                <p>02</p>
+            </div>
+            <div class="right-counting">
+                <p>03</p>
+                <p>04</p>
+            </div>
+        </div>
+        <h1 class="section-2-mainHeading">SELECTED WORKS: FULL-STACK, SYSTEMS, & WEBAPPS</h1>
 
-  <footer>
-    <p>© 2025 Muzammil Siddiqui</p>
-  </footer>
+        <div class="section-2-users">
+            <div class="left-users">
+                <!-- Tech icons instead of users -->
+                <div class="section2-user tech-icon"><i class="fa-brands fa-react"></i></div>
+                <div class="section2-user tech-icon"><i class="fa-brands fa-node-js"></i></div>
+                <div class="section2-user tech-icon"><i class="fa-brands fa-python"></i></div>
+                <div class="section2-user tech-icon"><i class="fa-solid fa-database"></i></div>
+            </div>
+            <div class="mid-arrows"><i class="fa-solid fa-arrow-right-long" style="color:white; font-size: 2rem;"></i>
+            </div>
+            <div class="right-cd">
+                <p>03</p>
+                <div class="section-2cd"></div>
+            </div>
+        </div>
 
-  <script src="script.js"></script>
+        <div class="projects-grid">
+            <div class="project-card-placeholder">
+                <div class="project-card-ui project-animate" onclick="toggleProjectModal(this)">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <div class="project-img-wrapper"><img src="./images/warzish.png" alt="Warzish"></div>
+                            <div class="project-info">
+                                <h1>WARZISH</h1>
+                                <p>WEB APP: Workout Logging & Fitness Tracking. Tech: Next.js, Supabase.</p>
+                                <a href="https://warzish.vercel.app" target="_blank"
+                                    onclick="event.stopPropagation()">Live App</a>
+                            </div>
+                        </div>
+                        <div class="project-card-back">
+                            <h1>WARZISH</h1>
+                            <p>Workout Logging & Fitness Tracking platform. Includes a 1300+ exercises dataset. Features
+                                secure Google OAuth integration and highly optimized database querying.</p>
+                            <p class="tech-stack-details">Tech: Next.js, TypeScript, Supabase</p>
+                            <a href="https://warzish.vercel.app" target="_blank" onclick="event.stopPropagation()">Visit
+                                Site <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card-placeholder">
+                <div class="project-card-ui project-animate" style="margin-top: 50px;"
+                    onclick="toggleProjectModal(this)">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <div class="project-img-wrapper"><img src="./images/dasti.png" alt="Dasti"></div>
+                            <div class="project-info">
+                                <h1>DASTI</h1>
+                                <p>PLATFORM: Academic Resource Sharing Platform. Tech: React, Supabase.</p>
+                                <a href="https://dasti.vercel.app" target="_blank"
+                                    onclick="event.stopPropagation()">Live App</a>
+                            </div>
+                        </div>
+                        <div class="project-card-back">
+                            <h1>DASTI</h1>
+                            <p>Academic Resource Sharing Platform designed exclusively for university students to
+                                streamline study materials and content distribution dynamically.</p>
+                            <p class="tech-stack-details">Tech: React, Supabase, Github Apps</p>
+                            <a href="https://dasti.vercel.app" target="_blank" onclick="event.stopPropagation()">Visit
+                                Site <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card-placeholder">
+                <div class="project-card-ui project-animate" onclick="toggleProjectModal(this)">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <div class="project-img-wrapper"><img src="./images/darkhwast.png" alt="Darkhwast"></div>
+                            <div class="project-info">
+                                <h1>DARKHWAST</h1>
+                                <p>SYSTEM: Role-based Complaint Management. Tech: ASP.NET Core.</p>
+                            </div>
+                        </div>
+                        <div class="project-card-back">
+                            <h1>DARKHWAST</h1>
+                            <p>A highly secure role-based Complaint Management System featuring a clean monochrome UI,
+                                secure admin routing, and robust state management.</p>
+                            <p class="tech-stack-details">Tech: ASP.NET Core MVC, C#, SQLite</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card-placeholder">
+                <div class="project-card-ui project-animate" style="margin-top: 50px;"
+                    onclick="toggleProjectModal(this)">
+                    <div class="project-card-inner">
+                        <div class="project-card-front">
+                            <div class="project-img-wrapper"><img src="./images/vidEditor.png" alt="Node Video Ed">
+                            </div>
+                            <div class="project-info">
+                                <h1>NODE VIDEO EDITOR</h1>
+                                <p>C++ APP: Node-based video editor. Tech: C++, Raylib.</p>
+                            </div>
+                        </div>
+                        <div class="project-card-back">
+                            <h1>NODE VIDEO ED</h1>
+                            <p>A native high-performance C++ node-based video editor utilizing core OS concepts like
+                                multithreading and process synchronization for fast rendering pipelines.</p>
+                            <p class="tech-stack-details">Tech: C++, Raylib, OS Concepts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blur overlay for project modals -->
+    <div id="blur-overlay" onclick="closeProjectModal()"></div>
+
+    <!-- <=============================== Footer / Contact ======================================= > -->
+    <div class="footer" id="contact">
+        <div class="footer-content">
+            <p>GET IN TOUCH</p>
+            <h1>MUZAMMIL SIDDIQUI</h1>
+            <div class="footer-date">
+                <h2>AVAILABLE</h2>
+                <h2>FOR HIRE</h2>
+            </div>
+            <div class="footer-links contact-buttons-container"
+                style="margin-top: 40px; display: flex; gap: 20px; justify-content: center;">
+                <a href="mailto:memuzammilsiddiqui@gmail.com" class="contact-btn">Email Me</a>
+                <a href="./Muzammil Siddiqui.pdf" download="Muzammil Siddiqui.pdf" class="contact-btn">Resume PDF <i
+                        class="fa-solid fa-download" style="margin-left: 8px;"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Up Arrow -->
+    <a href="#" class="scroll-up-btn"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
