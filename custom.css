@@ -472,83 +472,107 @@
 
 
 /* =========================================
-   RESPONSIVE DESIGN 
+   RESPONSIVE DESIGN (Tablets & Mobile)
    ========================================= */
 
-/* Tablets */
+html, body {
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 100%;
+}
+
 @media (max-width: 1024px) {
+    /* Herobox Elements */
     .herobox h1.herobox-mainheading {
         font-size: 25vw;
         top: 30%;
     }
-    .character {
-        width: 400px;
-        height: 570px;
-        bottom: -15%;
+    .surname-text {
+        font-size: 6vw;
     }
-    .red-circle {
-        width: 350px;
-        height: 350px;
+    .character {
+        width: 800px;
+        bottom: -20%;
     }
     .herobox-content-container {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 15px;
         top: 20%;
+        padding: 0 20px;
     }
     .content-1, .content-2 {
         width: 100%;
         justify-content: space-around;
     }
     .content-1 h1, .content-2 h1 {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
+    
+    /* Topbar & Hero Footer */
     .top-bar {
         padding: 0 20px;
     }
     .hero-footer {
         padding: 0 20px;
-        bottom: -5%;
+        bottom: 5%;
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
     }
-    .section-1, .section-2 {
+    .left-hero-content {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .right-hero-content {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Section 1 Layout (About/Skills) */
+    .section-1 {
         height: auto;
         min-height: 120vh;
         overflow: hidden;
+        padding-bottom: 50px;
     }
-    .card-container {
-        flex-wrap: wrap;
-        width: 90%;
-        gap: 20px;
-        top: 60%;
-        transform: translate(-50%, -50%);
-    }
-    .card {
-        position: relative;
-        width: 200px;
-        height: 250px;
-        margin-bottom: 10px;
-    }
-    .marvel-studio, .date-status, .section1-right-top-description, .rating, .socials {
+    .marvel-studio {
         position: relative;
         left: 0 !important;
-        right: 0 !important;
         top: 0 !important;
-        transform: none !important;
-        margin: 20px auto;
-        text-align: center;
-        justify-content: center;
+        margin: 40px auto;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 1 !important;
+    }
+    .education-timeline {
+        margin-left: 0;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
     }
     .date-status {
+        position: relative;
+        left: 0 !important;
+        top: 0 !important;
+        transform: none !important;
         width: 100%;
+        margin: 40px auto;
+        opacity: 1 !important;
+        filter: none !important;
         gap: 15px;
     }
     .left-section1-content {
         position: relative;
+        left: 0 !important;
+        top: 0 !important;
         width: 90%;
-        margin: 20px auto;
-        top: 0;
-        left: 0;
-        padding: 20px;
+        margin: 40px auto;
+        text-align: center;
+        padding: 0;
     }
     .section-1 h1.section-1footer-heading, 
     .section-1 h2.section-1footer-heading2, 
@@ -560,106 +584,113 @@
         bottom: 0;
         margin: 10px 0;
     }
+    
+    /* Card Stack scaling */
+    .card-container {
+        transform: translate(-50%, -50%) scale(0.8);
+        top: 60%;
+    }
+
+    /* Section 2 (Projects) */
+    .section-2 {
+        height: auto;
+        padding-bottom: 100px;
+    }
     .section-2 h1.section-2-mainHeading {
         font-size: 40px;
         width: 90%;
-        line-height: 40px;
-    }
-    .section-2-users {
-        top: 15%;
-        padding: 0 20px;
-    }
-    .teaser-text {
+        line-height: 45px;
+        margin: 0 auto;
+        text-align: center;
         position: relative;
+        top: 20px;
+        left: 0;
+    }
+    .section2-counting {
+        position: relative;
+        left: 0;
         top: 0;
+        display: flex;
+        justify-content: space-between;
         padding: 20px;
-        flex-direction: column;
-        align-items: center;
-        height: auto;
+        width: 100%;
     }
-    .project-item {
-        width: 90%;
-        margin-bottom: 30px;
-    }
-    .card-img {
+    .projects-grid {
         position: relative;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 40px 0;
+        top: 50px;
+        margin: 0 auto;
+        gap: 40px;
     }
-    .section2-footer-images {
-        position: relative;
-        padding: 0 20px;
+    
+    /* Footer */
+    .footer-content h1 {
+        font-size: 60px;
+        text-align: center;
     }
 }
 
-/* Mobile Devices */
 @media (max-width: 768px) {
+    /* Navbar */
     nav ul {
         display: none;
     }
-    .nav-logo-text {
-        font-size: 24px;
+    .nav-icons {
+        width: auto;
     }
+    .nav-logo-text {
+        font-size: 18px;
+    }
+    
+    /* Hero */
     .herobox h1.herobox-mainheading {
         font-size: 22vw;
         letter-spacing: -2px;
         top: 35%;
     }
-    .character {
-        width: 300px;
-        height: 430px;
+    .surname-text {
+        font-size: 8vw;
     }
-    .red-circle {
-        width: 250px;
-        height: 250px;
+    .character {
+        width: 550px;
+        bottom: -10%;
     }
     .content-1 h1, .content-2 h1 {
         font-size: 5vw;
     }
-    .hero-footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        bottom: 0;
-        height: auto;
-        padding-bottom: 20px;
+    .right-hero-content p, .cd, .topbar-buttons, .top-bar p {
+        display: none; /* Hide decorative non-essential elements on mobile */
     }
-    .left-hero-content {
-        width: 100%;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-    .right-hero-content {
-        width: 100%;
-        justify-content: center;
-    }
-    .right-hero-content a {
-        z-index: 4;
-    }
-    .cd {
-        right: 50px;
-    }
-    .right-hero-content p {
-        right: 70px;
-    }
-    .topbar-buttons {
-        width: 100%;
-        justify-content: space-around;
-    }
-    .top-bar p {
-        display: none;
+
+    /* Skills Card Stack */
+    .card-container {
+        transform: translate(-50%, -50%) scale(0.65);
+        top: 50%; /* Adjusted so it's vertically better on phones */
     }
     
-    .card-container {
-        flex-direction: column;
-        align-items: center;
+    /* Project Cards Mobile Overrides */
+    .project-card-placeholder, .project-card-ui {
+        width: 90vw;
+        height: 105vw; /* maintain aspect ratio closely */
     }
-    .card {
-        width: 80%;
-        height: 200px;
+    .project-card-back {
+        padding: 20px;
     }
+    .project-card-back h1 {
+        font-size: 24px;
+    }
+    .project-card-back p {
+        font-size: 13px;
+    }
+    
+    /* Expanded Flipped State Mobile */
+    .project-card-ui.flipped {
+        width: 95vw !important;
+        height: auto !important;
+        min-height: 110vw !important;
+        transform: translate(-50%, -50%) scale(1) !important; 
+    }
+    
+    /* Misc Adjustments */
     .stat-box {
         width: 90px;
         height: 90px;
@@ -669,36 +700,26 @@
     }
     .section-2 h1.section-2-mainHeading {
         font-size: 28px;
-        line-height: 32px;
-        top: 5%;
+        line-height: 36px;
     }
-    .section-2-users {
-        flex-direction: column;
-        height: auto;
-        gap: 20px;
-        top: 15%;
-    }
-    .left-users, .right-cd {
-        left: 0;
-        right: 0;
-        position: relative;
-        justify-content: center;
-    }
-    .mid-arrows {
-        display: none;
-    }
-    .card-img {
-        width: 90%;
-        height: 300px;
-    }
-    .card-img h2 {
-        font-size: 10vw !important;
-    }
+    
+    /* Footer & Contact */
     .footer-content h1 {
-        font-size: 60px;
+        font-size: 40px;
         text-align: center;
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+    .footer-content p {
+        font-size: 14px;
     }
     .footer-date h2 {
-        font-size: 20px;
+        font-size: 16px;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px !important;
     }
 }
+
