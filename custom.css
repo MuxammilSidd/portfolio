@@ -532,20 +532,24 @@ html, body {
 
     /* Section 1 Layout (About/Skills) */
     .section-1 {
-        height: auto;
-        min-height: 120vh;
-        overflow: hidden;
-        padding-bottom: 50px;
+        display: block !important;
+        height: auto !important;
+        min-height: 120vh !important;
+        overflow: hidden !important;
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
     }
     .marvel-studio {
-        position: relative;
-        left: 0 !important;
-        top: 0 !important;
-        margin: 40px auto;
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        right: auto !important;
+        margin: 40px auto !important;
+        width: 90% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
         opacity: 1 !important;
     }
     .education-timeline {
@@ -555,40 +559,78 @@ html, body {
         flex-direction: column;
     }
     .date-status {
-        position: relative;
-        left: 0 !important;
-        top: 0 !important;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        right: auto !important;
         transform: none !important;
-        width: 100%;
-        margin: 40px auto;
+        width: 100% !important;
+        margin: 40px auto !important;
         opacity: 1 !important;
         filter: none !important;
-        gap: 15px;
+        display: flex !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 15px !important;
     }
     .left-section1-content {
-        position: relative;
-        left: 0 !important;
-        top: 0 !important;
-        width: 90%;
-        margin: 40px auto;
-        text-align: center;
-        padding: 0;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        right: auto !important;
+        width: 90% !important;
+        margin: 40px auto !important;
+        text-align: center !important;
+        padding: 0 !important;
+        opacity: 1 !important;
+    }
+    .socials {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        right: auto !important;
+        transform: none !important;
+        margin: 20px auto !important;
+        width: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        gap: 20px !important;
+        opacity: 1 !important;
     }
     .section-1 h1.section-1footer-heading, 
     .section-1 h2.section-1footer-heading2, 
     .section-1 h1.section-1footer-heading3 {
-        position: relative;
-        left: 0;
-        right: 0;
-        text-align: center;
-        bottom: 0;
-        margin: 10px 0;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        text-align: center !important;
+        margin: 5px auto !important;
+        font-size: 8vw !important;
+        line-height: 1 !important;
+    }
+    .section-1 p.section-1footer-date {
+        position: relative !important;
+        bottom: auto !important;
+        margin: 20px auto !important;
+        text-align: center !important;
     }
     
     /* Card Stack scaling */
     .card-container {
-        transform: translate(-50%, -50%) scale(0.8);
-        top: 60%;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        margin: 50px auto !important;
+        transform: scale(0.8) !important;
+        transform-origin: top center !important;
+        height: 350px !important;
     }
 
     /* Section 2 (Projects) */
@@ -643,34 +685,36 @@ html, body {
     
     /* Hero */
     .herobox h1.herobox-mainheading {
-        font-size: 22vw;
+        font-size: 20vw;
         letter-spacing: -2px;
         top: 35%;
     }
     .surname-text {
-        font-size: 8vw;
+        font-size: 7vw;
     }
     .character {
-        width: 550px;
-        bottom: -10%;
+        width: 450px !important;
+        bottom: -5% !important;
     }
     .content-1 h1, .content-2 h1 {
         font-size: 5vw;
     }
     .right-hero-content p, .cd, .topbar-buttons, .top-bar p {
-        display: none; /* Hide decorative non-essential elements on mobile */
+        display: none !important; /* Hide decorative non-essential elements on mobile */
     }
 
     /* Skills Card Stack */
     .card-container {
-        transform: translate(-50%, -50%) scale(0.65);
-        top: 50%; /* Adjusted so it's vertically better on phones */
+        transform: scale(0.65) !important;
+        margin: 10px auto !important;
+        height: 280px !important;
     }
     
     /* Project Cards Mobile Overrides */
     .project-card-placeholder, .project-card-ui {
-        width: 90vw;
-        height: 105vw; /* maintain aspect ratio closely */
+        width: 90vw !important;
+        height: auto !important;
+        min-height: 400px !important;
     }
     .project-card-back {
         padding: 20px;
@@ -686,8 +730,10 @@ html, body {
     .project-card-ui.flipped {
         width: 95vw !important;
         height: auto !important;
-        min-height: 110vw !important;
+        min-height: 500px !important;
         transform: translate(-50%, -50%) scale(1) !important; 
+        left: 50% !important;
+        top: 50% !important;
     }
     
     /* Misc Adjustments */
