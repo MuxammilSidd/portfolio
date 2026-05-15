@@ -515,18 +515,23 @@ html, body {
     }
     .hero-footer {
         padding: 0 20px;
-        bottom: 5%;
+        bottom: auto !important;
+        top: auto !important;
+        position: relative !important;
+        margin-top: 50px;
         flex-direction: column;
         height: auto;
         gap: 20px;
     }
     .left-hero-content {
         width: 100%;
+        height: auto !important;
         align-items: center;
         text-align: center;
     }
     .right-hero-content {
         width: 100%;
+        height: auto !important;
         justify-content: center;
     }
 
@@ -547,16 +552,18 @@ html, body {
         right: auto !important;
         margin: 40px auto !important;
         width: 90% !important;
+        height: auto !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         opacity: 1 !important;
     }
     .education-timeline {
-        margin-left: 0;
-        align-items: flex-start;
-        display: flex;
-        flex-direction: column;
+        margin-left: 0 !important;
+        align-items: flex-start !important;
+        display: flex !important;
+        flex-direction: column !important;
+        height: auto !important;
     }
     .date-status {
         position: relative !important;
@@ -566,6 +573,7 @@ html, body {
         right: auto !important;
         transform: none !important;
         width: 100% !important;
+        height: auto !important;
         margin: 40px auto !important;
         opacity: 1 !important;
         filter: none !important;
@@ -574,6 +582,19 @@ html, body {
         flex-wrap: wrap !important;
         gap: 15px !important;
     }
+    .section1-right-top-description {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        right: auto !important;
+        width: 90% !important;
+        height: auto !important;
+        margin: 40px auto !important;
+        text-align: center !important;
+        opacity: 1 !important;
+        filter: none !important;
+    }
     .left-section1-content {
         position: relative !important;
         left: auto !important;
@@ -581,6 +602,7 @@ html, body {
         bottom: auto !important;
         right: auto !important;
         width: 90% !important;
+        height: auto !important;
         margin: 40px auto !important;
         text-align: center !important;
         padding: 0 !important;
@@ -593,8 +615,9 @@ html, body {
         bottom: auto !important;
         right: auto !important;
         transform: none !important;
-        margin: 20px auto !important;
+        margin: 40px auto !important;
         width: auto !important;
+        height: auto !important;
         display: flex !important;
         justify-content: center !important;
         gap: 20px !important;
@@ -609,9 +632,11 @@ html, body {
         top: auto !important;
         bottom: auto !important;
         text-align: center !important;
-        margin: 5px auto !important;
+        margin: 15px auto !important;
         font-size: 8vw !important;
-        line-height: 1 !important;
+        line-height: 1.2 !important;
+        height: auto !important;
+        display: block !important;
     }
     .section-1 p.section-1footer-date {
         position: relative !important;
@@ -713,11 +738,13 @@ html, body {
     /* Project Cards Mobile Overrides */
     .project-card-placeholder, .project-card-ui {
         width: 90vw !important;
-        height: auto !important;
+        height: 400px !important;
         min-height: 400px !important;
     }
     .project-card-back {
         padding: 20px;
+        height: 100% !important;
+        overflow-y: auto !important;
     }
     .project-card-back h1 {
         font-size: 24px;
@@ -728,12 +755,12 @@ html, body {
     
     /* Expanded Flipped State Mobile */
     .project-card-ui.flipped {
-        width: 95vw !important;
-        height: auto !important;
-        min-height: 500px !important;
+        width: 90vw !important;
+        height: 500px !important;
         transform: translate(-50%, -50%) scale(1) !important; 
         left: 50% !important;
         top: 50% !important;
+        z-index: 100 !important;
     }
     
     /* Misc Adjustments */
